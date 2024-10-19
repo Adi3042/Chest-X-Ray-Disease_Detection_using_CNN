@@ -1,8 +1,8 @@
 # 🌟 Chest X-Ray Disease Detection using CNN 🩺
 
-![Chest X-Ray](https://www.researchgate.net/publication/355191637/figure/fig2/AS:1117780455763973@1643511036380/Difference-in-Chest-X-Ray-Images-in-Normal-and-Pneumonia.png)
-
 This project focuses on utilizing **Convolutional Neural Networks (CNN)** for the **detection of Pneumonia** from chest X-ray images. The goal is to assist in faster and more accurate diagnoses, contributing to better medical decision-making.
+
+![Chest X-Ray](./static/chest.png)
 
 ## 🚀 Features
 
