@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Upload</title>
     <link rel="stylesheet" href="../static/css/index.css">
-    <script src="../static/javascript/index.js" defer></script>
 </head>
 <body>
     <div class="upload-container">
         <h1>Upload Your File</h1>
-        <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+        <form id="upload-form" action="/" method="post" enctype="multipart/form-data">
             <input type="file" id="file" name="file">
             <label for="file">Choose a file</label>
             <br>
             <button type="submit">Upload</button>
         </form>
         <div class="loading-spinner" id="loading-spinner"></div>
+        {% if img_data %}
+        <div class="result-container">
+            <h2>Prediction Result</h2>
+            <img src="data:image/png;base64,{{ img_data }}" alt="Uploaded Image">
+            <p>Class: {{ class_name }}</p>
+            <p>Confidence: {{ confidence }}%</p>
+        </div>
+        {% endif %}
     </div>
 </body>
 </html>

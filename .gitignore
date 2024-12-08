@@ -142,4 +142,4 @@ cython_debug/
 .idea/
 
 # Ignore chest_xray folder
-chest_xray/
+data/
