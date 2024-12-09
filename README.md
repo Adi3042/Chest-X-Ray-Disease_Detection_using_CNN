@@ -2,7 +2,7 @@
 
 This project focuses on utilizing **Convolutional Neural Networks (CNN)** for the **detection of Pneumonia** from chest X-ray images. The goal is to assist in faster and more accurate diagnoses, contributing to better medical decision-making.
 
-![Chest X-Ray](./static/chest.png)
+![Chest X-Ray](./static/assets/chest.png)
 
 ## 🚀 Features
 
@@ -25,6 +25,14 @@ This project focuses on utilizing **Convolutional Neural Networks (CNN)** for th
     ```bash
     pip install -r requirements.txt
     ```
+4. **Run app.py**:
+    ```bash
+    python app.py
+    ```
+5. **Visit at Given link**:
+    ```bash
+    http://127.0.0.1:5000/
+    ```
 
 ## 🧑‍💻 Usage
 
@@ -36,26 +44,38 @@ This project focuses on utilizing **Convolutional Neural Networks (CNN)** for th
      - Move all **PNEUMONIA** images into a single `PNEUMONIA/` folder.
    - Ensure your structure looks like this:
      ```
-     CHEST-X-RAY/
-     ├── chest_xray/
-     │   ├── NORMAL/
-     │   ├── PNEUMONIA/
-     ├── models/
-     ├── static/
-     │   ├── javascript/ (index.js)
-     │   ├── css/ (index.css)
-     ├── templates/ (index.html)
-     ├── venv/
-     ├── .gitignore
-     ├── application.py
-     ├── Chest-X-Ray.ipynb
-     ├── requirements.txt
+      Chest-X-Ray-Disease_Detection_using_CNN/
+      ├── data/
+      │   ├── NORMAL/
+      │   ├── PNEUMONIA/
+      ├── saved_models/
+      │   ├── Chest_Disease_Classifier_Model.h5
+      │   ├── Chest_Disease_Classifier_Model.keras
+      │   ├── Chest_Disease_Classifier_Model.tflite
+      ├── src/
+      │   ├── exception.py
+      │   ├── logger.py
+      │   ├── utils.py
+      ├── static/
+      │   ├── javascript/
+      │   │   ├── index.js
+      │   │   ├── contactUs.js
+      │   ├── css/
+      │   │   ├── index.css
+      │   │   ├── contactUs.css
+      │   ├── assets/
+      │   │   ├── chest.png
+      │   │   ├── favicon.png
+      │   │   ├── logo1.png
+      ├── templates/
+      │   ├── index.html
+      │   ├── contactUs.html
+      ├── app.py
+      ├── Chest_X_Ray.ipynb
+      ├── requirements.txt
+      ├── LICENSE
+      ├── .gitignore
      ```
-
-3. **Run the project**:
-   ```bash
-   python application.py
-   ```
 
 ## 📜 License
 
