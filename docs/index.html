@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chest Xray Classifier</title>
+    <link rel="stylesheet" href="/docs/static/css/index.css">
+    <link rel="icon" href="/docs/static/assets/logo1.png" type="image/png" />
+</head>
+<body>
+    <header>
+        <a href="/" class="logo-link">
+            <img src="/docs/static/assets/logo1.png" alt="Logo" class="logo">
+        </a>
+        <nav>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/contactUs">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    <div class="upload-container">
+        <h1>Upload Your File</h1>
+        <form id="upload-form" action="/" method="post" enctype="multipart/form-data">
+            <input type="file" id="file" name="file">
+            <label for="file">Choose a file</label>
+            <br>
+            <button type="submit">Upload</button>
+        </form>
+        <div class="loading-spinner" id="loading-spinner"></div>
+        {% if img_data %}
+        <div class="result-container">
+            <h2>Prediction Result</h2>
+            <img src="data:image/png;base64,{{ img_data }}" alt="Uploaded Image">
+            <p>Class: {{ class_name }}</p>
+            <p>Confidence: {{ confidence }}%</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
